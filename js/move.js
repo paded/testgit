@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $(".bottom-panel").click(function(){
+        if($(this).hasClass('expanded')){
+            $(this).removeClass('expanded').stop().animate({"bottom":"-90%"},200);
+        }else{
+            $(this).addClass('expanded').stop().animate({"bottom":"0"},200);
+        }
+    });
+});
