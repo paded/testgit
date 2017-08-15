@@ -3,6 +3,48 @@ body {
   background-color: #fafafa;
   overflow: hidden; }
 
+/* positions */
+.material-icons.md-mg-left-10 {
+  margin-left: 10px; }
+
+.material-icons.md-mg-left--10 {
+  margin-left: -20px; }
+
+.material-icons.md-mg-top-10 {
+  margin-top: 5px; }
+
+/* size */
+.material-icons.md-18 {
+  font-size: 18px; }
+
+.material-icons.md-24 {
+  font-size: 24px; }
+
+.material-icons.md-30 {
+  font-size: 30px; }
+
+.material-icons.md-36 {
+  font-size: 36px; }
+
+.material-icons.md-48 {
+  font-size: 48px; }
+
+/* color */
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54); }
+
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26); }
+
+.material-icons.md-light {
+  color: white; }
+
+.material-icons.md-super-light {
+  color: #e0e0e0; }
+
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3); }
+
 .box {
   width: 50px;
   height: 50px;
