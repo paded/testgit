@@ -1,85 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <!-- Optional theme -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-           <script src="js/move.js"></script>
-        
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="js/move.js"></script>
+
     <style>
-        #search{
+        #search {
             border-radius: 50px 50px 50px 50px;
-             border: none;
-             height: 50px;
-             
+            border: none;
+            height: 50px;
         }
-        .box{
+
+        .box {
             position: absolute;
             margin-top: -10px;
         }
-        #search-btn{
-            background-color: #286efa;
-            border-radius: 50%;
-            height: 45px;
-            width: 45px;
-        }
-        #bg-search{
+
+        #bg-search {
             background-color: red;
             height: 30px;
         }
-        </style>
-    </head>
-    <body> 
-            <div class="top-search-panel" style="margin-left:10px;">
-                <div class="search-box">
-                            <div class="title-search"> Where you want to go?</div>
-                    <div class="row" style="text-align:center">
-                            <div class="col-xs-12" >
-                                <div class="row">
-                                    <div class="col-xs-2" style="padding:5px auto;"><i class="material-icons md-30 md-mg-top-10 md-light">location_on</i></div>
-                                    <div class="col-xs-10" style="padding-left:0px;"><input id="search-input-box" type="text" placeholder="Choose your starting point"/></div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12" style="margin-bottom:-6px;">
-                                <div class="col-xs-2" ><i class="material-icons md-24 md-super-light md-mg-left--10">more_vert</i></div>
-                            </div>
-                            <div class="col-xs-12">
-                                 <div class="row">
-                                    <div class="col-xs-2" style="padding:5px auto;"><i class="material-icons md-30 md-mg-top-10 md-light">my_location</i></div>
-                                     <div class="col-xs-10" style="padding-left:0px;"><input id="search-input-box" type="text"  placeholder="Choose your destination"/></div>
-                                </div>
-                            </div>
-                    </div>
+    </style>
+</head>
 
+<body>
+    <div class="top-search-panel" style="margin-left:10px;">
+        <div class="search-box">
+            <div class="title-search"> Where you want to go?</div>
+            <div class="row" style="text-align:center">
+                <div class="col-xs-12" style="margin-bottom:-6px;">
+                    <div class="row">
+                        <div class="col-xs-2" style="padding:5px auto;"><i class="material-icons md-30 md-mg-top-10 md-light">location_on</i></div>
+                        <div class="col-xs-10" style="padding-left:0px;"><input id="search-input-box" type="text" placeholder="Choose your starting point" /></div>
+                    </div>
                 </div>
+                <div class="col-xs-12" style="margin-bottom:-6px;">
+                    <div class="col-xs-2"><i class="material-icons md-24 md-super-light md-mg-left--10">more_vert</i></div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-2" style="padding:5px auto;"><i class="material-icons md-30 md-mg-top-10 md-light">my_location</i></div>
+                        <div class="col-xs-10" style="padding-left:0px;"><input id="search-input-box" type="text" placeholder="Choose your destination" /></div>
+                    </div>
+                </div>
+               
+                        <div class="col-md-12" style="margin-top:5px;">
+                            <button id="search-btn">Search</button>
+                        </div>
+                      
+                   
+
 
             </div>
-            <div class="bottom-panel">
-                 <div class="more-btn box-2">
-                     <div class="row">
-                            <div class="col-xs-6 more-title">
-                                More Infomation
-                            </div>
-                             <div class="col-xs-6" id="more-btn-icon"style="text-align:right; margin-left:-10px;">
-                                     <i class="material-icons md-36" id="up-arrow">keyboard_arrow_up</i>
-                            </div>
-                        </div>
-                
-                  </div>
-                  <!-- <div class="row">
+
+        </div>
+
+
+        <div class="detail-box">
+
+        </div>
+
+    </div>
+    <div class="bottom-panel">
+        <div class="more-btn box-2">
+            <div class="row">
+                <div class="col-xs-6 more-title">
+                    More Infomation
+                </div>
+                <div class="col-xs-6" id="more-btn-icon" style="text-align:right; margin-left:-10px;">
+                    <i class="material-icons md-36" id="up-arrow">keyboard_arrow_up</i>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="row">
                       <div class="col-xs-6">d</div>
                       <div class="col-xs-6">d</div>
                   </div> -->
-            <div>
-       
-        </body>
+        <div>
+
+</body>
+
 </html>
