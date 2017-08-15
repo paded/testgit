@@ -45,14 +45,6 @@ body {
 .material-icons.md-light.md-inactive {
   color: rgba(255, 255, 255, 0.3); }
 
-.box {
-  width: 50px;
-  height: 50px;
-  background-color: red; }
-
-@media only screen and (max-width: 768px) {
-  .box {
-    background-color: #8BC34A; } }
 .bottom-panel {
   visibility: hidden;
   -webkit-box-shadow: 3px -6px 28px -10px rgba(33, 33, 33, 0.68);
