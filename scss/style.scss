@@ -12,6 +12,11 @@ $BG_COLOR: #FFF;
 $BASE_HUE: 60; // center hue in HSL 
 $HUE_DIFF: -160; 
 $RADIUS: 300px;
+ body{
+          font-family: "Roboto Mono";
+           background-color:$bg;
+          overflow: hidden;
+            }
 .box{
   width: 50px;
   height: 50px;
@@ -43,7 +48,7 @@ $RADIUS: 300px;
 -moz-box-shadow: 3px -6px 28px -10px rgba(33,33,33,0.68);
 box-shadow: 3px -6px 28px -10px rgba(33,33,33,0.68);
 // background-image: linear-gradient( 135deg, #70F570 10%, #49C628 100%);
-background-color:#2196F3;
+background-color:$panel;
   position: absolute;
   border-radius: 16px 16px 0px 0px;
   bottom: -92%;
@@ -69,8 +74,8 @@ background-color:#2196F3;
   width:320px;
   height:180px;
   border-radius:10px;
-background-image: linear-gradient( 135deg, #70F570 10%, #49C628 100%);
-  // background-color:#2196F3;
+// background-image: linear-gradient( 135deg, #70F570 10%, #49C628 100%);
+  background-color:$panel;
  -webkit-box-shadow: 3px 9px 28px -10px rgba(33,33,33,0.68);
 -moz-box-shadow: 3px 9px 28px -10px rgba(33,33,33,0.68);
 box-shadow: 3px 9px 28px -10px rgba(33,33,33,0.68);
@@ -99,12 +104,13 @@ top:10px;
 
 @media only screen and (max-width:425px){
       .bottom-panel{
+        font-family: "Roboto Mono";
         visibility: visible;
       -webkit-box-shadow: 3px -6px 28px -10px rgba(33,33,33,0.68);
       -moz-box-shadow: 3px -6px 28px -10px rgba(33,33,33,0.68);
       box-shadow: 3px -6px 28px -10px rgba(33,33,33,0.68);
-      background-image: linear-gradient( 135deg, #70F570 10%, #49C628 100%);
-      // background-color:#2196F3;
+      // background-image: linear-gradient( 135deg, #70F570 10%, #49C628 100%);
+      background-color:$panel;
         position: absolute;
         border-radius: 16px 16px 0px 0px;
         bottom: -92%;
@@ -112,7 +118,8 @@ top:10px;
         width: 100%;
         cursor:pointer;
         font-size:16px;
-        transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+        // transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+        //  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
         overflow: hidden;
       
       }
@@ -120,17 +127,27 @@ top:10px;
         padding:10px;
         height: 50px;
         color:#fff; 
+         transition: transform 600ms;
       }
       .centered {
         position: fixed;
       }
+      .box-2 {
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.more-btn.animate {
+  transform: translateX(20rem);
+}
+
       .search-box{
         position: absolute;
         width:95%;
         height:180px;
+        font-family: "Roboto Mono";
         border-radius:10px;
-      background-image: linear-gradient( 135deg, #70F570 10%, #49C628 100%);
-        // background-color:#2196F3;
+      // background-image: linear-gradient( 135deg, #70F570 10%, #49C628 100%);
+     background-color:$panel;
       -webkit-box-shadow: 3px 9px 28px -10px rgba(33,33,33,0.68);
       -moz-box-shadow: 3px 9px 28px -10px rgba(33,33,33,0.68);
       box-shadow: 3px 9px 28px -10px rgba(33,33,33,0.68);
@@ -147,7 +164,7 @@ top:10px;
         padding: 20px;
         border: none;
         background-color: #F5F5F5;
-        height: 45px;
+        height: 40px;
         width: 100%;
         border-radius: 6px;
       }
@@ -203,44 +220,44 @@ top:10px;
 
 
 
-.particle {
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  margin: auto;
-  width: $BASE_SIZE;
-  height: $BASE_SIZE;
-  border-radius: 50%;
-  @if($SHADOWS){
-    box-shadow: 0 ($BASE_SIZE*.2) ($BASE_SIZE*.2) rgba(0,0,0,.3), 
-                0 (-$BASE_SIZE*.4) ($BASE_SIZE*.2) rgba(0,0,0,.1) inset,
-                0 ($BASE_SIZE*.6) ($BASE_SIZE*.2) rgba(255,255,255,.1) inset;
-  }
-  opacity: 0;
-  animation: doit $ANIMATION_DURATION infinite $ANIMATION_EASE;
-  animation-direction: $ANIMATION_DIRECTION;
- }
+// .particle {
+//   position: absolute;
+//   top: 0; right: 0; bottom: 0; left: 0;
+//   margin: auto;
+//   width: $BASE_SIZE;
+//   height: $BASE_SIZE;
+//   border-radius: 50%;
+//   @if($SHADOWS){
+//     box-shadow: 0 ($BASE_SIZE*.2) ($BASE_SIZE*.2) rgba(0,0,0,.3), 
+//                 0 (-$BASE_SIZE*.4) ($BASE_SIZE*.2) rgba(0,0,0,.1) inset,
+//                 0 ($BASE_SIZE*.6) ($BASE_SIZE*.2) rgba(255,255,255,.1) inset;
+//   }
+//   opacity: 0;
+//   animation: doit $ANIMATION_DURATION infinite $ANIMATION_EASE;
+//   animation-direction: $ANIMATION_DIRECTION;
+//  }
 
- @keyframes doit {
-  0% { opacity: 0; }
-  5% { opacity: 1; }
-  100% { 
-    opacity: 1;
-    transform: translateX(0) translateY(0) scale($INITIAL_SCALE);
-  } 
-}
+//  @keyframes doit {
+//   0% { opacity: 0; }
+//   5% { opacity: 1; }
+//   100% { 
+//     opacity: 1;
+//     transform: translateX(0) translateY(0) scale($INITIAL_SCALE);
+//   } 
+// }
 
 
-$i: 1;
-@for $i from $i through $NUM_PARTICLES {
-  $coords: calcCoords();
-  $x: nth($coords,1) * $RADIUS;
-  $y: nth($coords,2) * $RADIUS;
-  $c: nth($coords,3); // hypoteneuse - the distance from center
-  $d: sin($c*$pi/2); // to a nice curve
-  #particle#{$i} {
-    background: hsla($BASE_HUE + $d * $HUE_DIFF, 100%, (80% - 30% * $d), 1);
-    transform: translateX($x) translateY($y) scale(1-$d);
-    animation-delay: -1 * random($ANIMATION_DURATION) + ms;
-    //z-index: $NUM_PARTICLES + floor($NUM_PARTICLES*$d);
-  }
-}
+// $i: 1;
+// @for $i from $i through $NUM_PARTICLES {
+//   $coords: calcCoords();
+//   $x: nth($coords,1) * $RADIUS;
+//   $y: nth($coords,2) * $RADIUS;
+//   $c: nth($coords,3); // hypoteneuse - the distance from center
+//   $d: sin($c*$pi/2); // to a nice curve
+//   #particle#{$i} {
+//     background: hsla($BASE_HUE + $d * $HUE_DIFF, 100%, (80% - 30% * $d), 1);
+//     transform: translateX($x) translateY($y) scale(1-$d);
+//     animation-delay: -1 * random($ANIMATION_DURATION) + ms;
+//     //z-index: $NUM_PARTICLES + floor($NUM_PARTICLES*$d);
+//   }
+// }

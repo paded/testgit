@@ -38,17 +38,14 @@
            
 
         }
-            body{
-                font-family: "Roboto Mono";
-                background-color:#ffffff;
-                overflow: hidden;
-            }
 /* positions */
-.material-icons.md-mg-left-10{margin-left: 6px;;}
-.material-icons.md-mg-top-10{margin-top: 6px;;}
+.material-icons.md-mg-left-10{margin-left: 10px;}
+.material-icons.md-mg-left--10{margin-left: -20px;}
+.material-icons.md-mg-top-10{margin-top: 5px;}
 /* size */
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
+.material-icons.md-30 { font-size: 30px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
     /* color */
@@ -56,6 +53,7 @@
 .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
 
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-super-light { color:#e0e0e0; }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
          
     .form-wrapper {
@@ -69,42 +67,24 @@
         </style>
     </head>
     <body> 
-      
-         <!-- <div class="row" style="padding:20px;">
-    
-           <div class="col-md-4">   
-           </div>
-
-            <div class="col-md-4" >   
-                  <div class="row">
-                       <div class="col-md-8 col-md-offset-2">  
-                         
-                           <div class="row">
-                                <div class="col-xs-6"> 
-                                        <input class="search-bx" id="search" type="text"/>
-                                </div>
-                                <div class="col-xs-6" style="position:fixed;"> 
-                                    <div id="search-btn" class="floating-box">
-                                                <i class="material-icons md-light md-36 md-mg-left-10 md-mg-top-10">search</i>
-                                    </div>
-                                </div>
-                           </div>
-                        </div>
-                 </div>
-                </div> 
-            <div class="col-md-4">
-                
-            </div>
-            </div>  -->
             <div class="top-search-panel" style="margin-left:10px;">
                 <div class="search-box">
                             <div class="title-search"> Where you want to go?</div>
                     <div class="row" style="text-align:center">
                             <div class="col-xs-12" >
-                                <input id="search-input-box" type="text" placeholder="Choose your starting point"/>
+                                <div class="row">
+                                    <div class="col-xs-2" style="padding:5px auto;"><i class="material-icons md-30 md-mg-top-10 md-light">location_on</i></div>
+                                    <div class="col-xs-10" style="padding-left:0px;"><input id="search-input-box" type="text" placeholder="Choose your starting point"/></div>
+                                </div>
                             </div>
-                            <div class="col-xs-12" style="padding-top:10px;">
-                                 <input id="search-input-box" type="text"  placeholder="Choose your destination"/>
+                            <div class="col-xs-12" style="margin-bottom:-6px;">
+                                <div class="col-xs-2" ><i class="material-icons md-24 md-super-light md-mg-left--10">more_vert</i></div>
+                            </div>
+                            <div class="col-xs-12">
+                                 <div class="row">
+                                    <div class="col-xs-2" style="padding:5px auto;"><i class="material-icons md-30 md-mg-top-10 md-light">my_location</i></div>
+                                     <div class="col-xs-10" style="padding-left:0px;"><input id="search-input-box" type="text"  placeholder="Choose your destination"/></div>
+                                </div>
                             </div>
                     </div>
 
@@ -112,7 +92,7 @@
 
             </div>
             <div class="bottom-panel">
-                 <div class="more-btn">
+                 <div class="more-btn box-2">
                      <div class="row">
                             <div class="col-xs-6 more-title">
                                 More Infomation
